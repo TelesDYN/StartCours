@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>MagicResponse</title>
+</head>
+<body>
+    <form action="https://www.youtube.com/results?" target="blank"> <!--Ao colocar o nome do elemento direto na URL, ele é ignorado, portanto, o que vier após "?" deve ser posto no atributo "name" de "input ="text""-->
+        <label for="Magic">O que você deseja pesquisar no YouTube?</label> <!--O atributo for, da tag Label, pode ser nomeado como o dev desejar-->
+        <input type="text" id="Magic" placeholder="e.g. Canal do Acelerados" name="search_query" required> <!--Assim como "label for=" pode ser nomeado como o dev desejar, "id=" também pode. Porém ambos terão de ser necessariamente iguais--> 
+        <!--o atributo "required" força o usuário a inserir algo no input, fazendo assim a validação. Pode ser combinado com "min" e "max" e "email" por exemplo-->
+        <input type="submit" value="GimmeResponse">
+
+        <!--O atributo "name" da tag "input type="text"" se refere ao nome do elemento no BackEnd, este portanto, não é decidido por nós e sim pelo servidor-->
+    </form>
+    <!--IMPORTANTE OBSERVAR: A interrogação no atributo action não influencia no resultado da requisição. Entretanto, qualquer caractere além do elemento no atributo "name" da tag input, influencia negativamente o resultado.-->
+    
+    <!--.container.testclass.form>form>input*2+button{Clique aqui}-->
+    <!--
+    <div class="container testclass form">
+        <form action=""><input type="text"><input type="text"><button>Clique Aqui</button></form>
+    </div>
+    -->
+</body>
+</html>
