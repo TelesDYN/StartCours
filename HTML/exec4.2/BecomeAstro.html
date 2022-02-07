@@ -1,74 +1,74 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro da Liga dos Astronautas</title>
-</head>
-<body>
-    <h3>Cadastro da Liga dos Astronautas</h3>
-    <div>
-        <form action="www.example.com/register">
-            <div>
-                <label for="username">Nome: </label>
-                <input type="text" id="username" name="username" placeholder="Ex: José da Silva" required autofocus>
-            </div>
-            <br> <!--Lembre-se que o atributo "name" se refere ao nome do elemento no BackEnd, o qual não decidimos na montagem do HTML-->
-            <div>
-                <label for="email">Email: </label>
-                <input type="email" name="email" id="email" required placeholder="example@email.com">
-            
-                <label for="psw">- Senha</label>
-                <input type="password" required id="psw">
-            </div>
-            <br>
-            <div>
-                <label for="birthdate">Data de Nascimento: </label>
-                <input type="date" id="birthdate" required>
-                <label for="profilepic">Foto: </label>
-                <input type="file" name="profilepic" id="profilepic">
-            </div>
-            <br>
-            <div>
-                <label for="country">Nacionalidade: </label>
-                <input list ="country" required>
-                    <datalist id="country">
-                        <option value="Russo"></option>
-                        <option value="Americano"></option>
-                        <option value="Brasileiro"></option>
-                    </datalist>
+    <head>
+        <meta charset="UTF-8">
+        <title>Cadastro da Liga dos Astronautas</title>
+    </head>
+    <body>
+        <h3>Cadastro da Liga dos Astronautas</h3>
+        <div>
+            <form action="www.example.com/register">
+                <div>
+                    <label for="username">Nome: </label>
+                    <input type="text" id="username" name="username" placeholder="Ex: José da Silva" required autofocus>
+                </div>
+                <br> <!--Lembre-se que o atributo "name" se refere ao nome do elemento no BackEnd, o qual não decidimos na montagem do HTML-->
+                <div>
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" required placeholder="example@email.com">
+                
+                    <label for="psw">- Senha</label>
+                    <input type="password" required id="psw">
+                </div>
+                <br>
+                <div>
+                    <label for="birthdate">Data de Nascimento: </label>
+                    <input type="date" id="birthdate" required>
+                    <label for="profilepic">Foto: </label>
+                    <input type="file" name="profilepic" id="profilepic">
+                </div>
+                <br>
+                <div>
+                    <label for="country">Nacionalidade: </label>
+                    <input list ="country" required>
+                        <datalist id="country">
+                            <option value="Russo"></option>
+                            <option value="Americano"></option>
+                            <option value="Brasileiro"></option>
+                        </datalist>
 
-                <label for="female">- Genero: F</label>
-                <input type="radio" name="gender" id="female" required>
-                <label for="male">M</label>
-                <input type="radio" name="gender" id="male" required>
-            </div>
-            <br>
-            <div>
-                <p>Suas principais qualidades:</p>
-                
-                <input type="checkbox" name="competences" id="intelligence">
-                <label for="intelligence">Inteligência</label>
-                
-                <input type="checkbox" name="competences" id="resilience">
-                <label for="resilience">Resiliência</label>
-                
-                <input type="checkbox" name="competences" id="physic">
-                <label for="physic">Preparo Físico</label>
-                
-                <input type="checkbox" name="competences" id="education">
-                <label for="education">Educação</label>
-            </div>
-            <br>
-            <div>
-                <textarea name="message" id="message" required placeholder="Porque você gostaria de ser um astronauta?">
-                </textarea>
-            </div>
-            <br>
-            <div>
-                <input type="submit" value="Criar">
-            </div>
-        </form>
-        
-    </div>
-</body>
+                    <label for="female">- Genero: F</label>
+                    <input type="radio" name="gender" id="female" required>
+                    <label for="male">M</label>
+                    <input type="radio" name="gender" id="male" required>
+                </div>
+                <br>
+                <div>
+                    <p>Suas principais qualidades:</p>
+                    
+                    <input type="checkbox" name="competences" id="intelligence">
+                    <label for="intelligence">Inteligência</label>
+                    
+                    <input type="checkbox" name="competences" id="resilience">
+                    <label for="resilience">Resiliência</label>
+                    
+                    <input type="checkbox" name="competences" id="physic">
+                    <label for="physic">Preparo Físico</label>
+                    
+                    <input type="checkbox" name="competences" id="education">
+                    <label for="education">Educação</label>
+                </div>
+                <br>
+                <div>
+                    <textarea name="message" id="message" required placeholder="Porque você gostaria de ser um astronauta?">
+                    </textarea>
+                </div>
+                <br>
+                <div>
+                    <input type="submit" value="Criar">
+                </div>
+            </form>
+            
+        </div>
+    </body>
 </html>
