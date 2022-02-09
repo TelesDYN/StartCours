@@ -1,0 +1,24 @@
+body{
+    margin: 60px 200px;
+    margin-top: 0px;
+}
+.post-container{
+    padding: 50px 50px;
+}
+.main{ 
+    background-color:#fffafa;
+}
+.post-container .date{ /*É sempre bom ser bem específico sobre qual classe estamos trabalhando, e sobre quem são seus parentes (pai, filho)*/
+    color: #008080;
+    font-family: Roboto, sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-family: Montserrat, sans-serif;
+    font-weight: 700;
+}
+.post-content{
+    font-family: Open Sans, sans-serif;
+    font-size: 13px;
+}
