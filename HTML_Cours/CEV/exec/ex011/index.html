@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exercício 11</title>
+        <style>
+            img{
+                width: 50%;
+                height: 50%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Imagens Dinâmicas</h1>
+        <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+        <picture><!--Com a tag picture, podemos adicionar várias fontes para um mesmo elemento de imagem.-->
+
+            <!--Geralmente, colocamos em torno de 50px adicionados ao tamanho em px desejado, no atributo max-width, a fim de eliminar a barra de rolagem.-->
+
+            <!--"source:media:type"-->
+            <source media="(max-width: 750px )" srcset="img/img_p.png" type="image/png">
+            <source media="(max-width: 1050px )" srcset="img/img_m.png" type="image/png"> <!--Type aparentemente serve apenas para fins de metadados.-->
+            <img src="img/img_g.png" alt="Imagem Flexível">
+
+            <!--Ao trabalharmos com o "max-width", é necessário que utilizemos a tag source, acompanhada do media type da menor imagem para a maior, caso o contrário, não funciona devidamente.-->
+        </picture>
+
+        <picture>
+            <!--Aqui podemos observar que não trabalhamos com o tamanho da imagem em si, e sim com o tamanho que há disponível na tela. Parece-me contraditório utilizar imagens que tenham resoluções como 1920px por 1080px nesses casos.-->
+            <source media="(max-width: 1200px )" srcset="img/moon_p.jpg" type="image/jpeg">
+            <source media="(max-width: 1980px )" srcset="img/moon_m.jpg" type="image/jpeg">
+            <img src="img/moon_g.jpg" alt="Flexible Moon">
+        </picture>
+
+        <h1>Reproduzindo Áudio</h1>
+        <p>Aqui, você pode reproduzir áudios diretamente de um HTML5</p>
+        <audio src="media/505.mp3" controls preload="metadata"></audio> <!--
+            OBSERVAÇÕES SOBRE AUDIO
+            *É necessário o atributo controls, para que apareça um player a fim de executar o áudio.
+            *É de extrema importância que você configure o preload desse áudio de acordo com a necessidade - recomenda-se deixar metadata, caso você não precise de um autoplay ou não tem certeza que o usuário irá interagir com a mídia. Dessa forma, deixaremos o carregamento do site mais leve.
+            *autoplay se comporta de formas diferentes em navegadores distintos.
+        -->
+        <audio controls> <!--Usando a tag audio dessa forma, estamos implementando um áudio de forma mais avançada.-->
+            <source src="media/guanacast_33.mp3" type="audio/mpeg"> <!--Aqui usamos a tag source, junto apenas dos atributos src e type.-->
+            <source src="media/guanacast_33.ogg" type="audio/ogg"> <!--Podemos utilizar múltiplos sources, a fim de termos arquivos reserva para executar, caso o navegador do usuário não seja compatível.-->
+            <p>Infelizmente não conseguimos executar o áudio em seu navegador. <a href="media/guanacast_33.mp3" download="guanacast_33.mp3" type="audio/mpeg">Clique aqui para baixar o arquivo em MP3!</a></p><!--Se nenhum dos sources conseguir passar pela incompatibilidade, um parágrafo é exibido no lugar. Caso contrário, o mesmo ficará oculto.-->
+        </audio>
+
+    </body>
 </html>
