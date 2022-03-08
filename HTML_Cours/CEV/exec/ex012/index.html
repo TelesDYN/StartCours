@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vídeos com HTML5</title>
+    </head>
+    <body>
+        <h1>Inserindo vídeos hospedados localmente</h1>
+        <p>O video a seguir está hospedado em um servidor próprio.</p>
+        <video loop controls poster="img/thumbnail.png" width="50%" preload="metadata"> <!--O width na tag video, faz com que o poster e o tamanho da exibição do vídeo na página conversem-->
+            <source src="media/video_woman.mkv" type="video/webm"> <!--Por alguma razão, o tipo MIME correto da extensão, não funciona, fazendo com que o vídeo não carregue. (video/x-matroska)-->
+            <source src="media/video_woman.m4v" type="video/mp4">
+            <!--Lembre-se de que a ordem dos sources é importante.-->
+            <p>Não conseguimos executar seu vídeo aqui. Para assisti-lo, faça o <a href="media/video_woman.mp4" download="video_woman.mp4" type="video/mp4">download</a> do arquivo!</p>
+        </video>
+        <p hidden>
+            I think, I'm falling in love with this example.
+        </p>
+
+        <h1>Inserindo vídeos do YouTube</h1> <!--Pra assinaturas, maior personalização, recomenda-se o vimeo em paralelo ao Youtube-->
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/MRIZSoE40R0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </body>
+</html>
